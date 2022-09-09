@@ -1,7 +1,6 @@
-package com.example.softwareengineering.model;
+package com.microservices.studentservice.model;
 
 public class Student {
-
     private String username;
     private String docNumber;
     private String address;
@@ -9,6 +8,14 @@ public class Student {
 
     public String getUsername() {
         return username;
+    }
+
+    public Student(String username, String docNumber, String address, String registration) {
+        super();
+        this.username = username;
+        this.docNumber = docNumber;
+        this.address = address;
+        this.registration = registration;
     }
 
     public void setUsername(String username) {
