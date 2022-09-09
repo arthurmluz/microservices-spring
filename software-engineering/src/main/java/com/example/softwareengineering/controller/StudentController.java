@@ -1,0 +1,5 @@
+package com.example.softwareengineering.controller;
+
+public class StudentController {
+    
+}
