@@ -4,17 +4,17 @@ public class Student {
     private String username;
     private String docNumber;
     private String address;
-    private int registration; // numero de matricula
+    private int id; // numero de matricula
 
     public String getUsername() {
         return username;
     }
 
-    public Student(String username, String docNumber, String address, int registration) {
+    public Student(String username, String docNumber, String address, int id) {
         this.username = username;
         this.docNumber = docNumber;
         this.address = address;
-        this.registration = registration;
+        this.id = id;
     }
 
     public void setUsername(String username) {
@@ -37,7 +37,7 @@ public class Student {
         this.address = address;
     }
 
-    public int getRegistration() {
-        return registration;
+    public int getid() {
+        return id;
     }
 }

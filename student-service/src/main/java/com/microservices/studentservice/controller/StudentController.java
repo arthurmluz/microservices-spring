@@ -39,7 +39,7 @@ public class StudentController {
     }
 
     @GetMapping
-    public @ResponseBody Optional<Student> getById(@RequestParam("registration") int registration){
-        return studentRepository.findById(registration);
+    public @ResponseBody Optional<Student> getById(@RequestParam("id") int id){
+        return studentRepository.findById(id);
     }
 }

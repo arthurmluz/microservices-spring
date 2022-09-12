@@ -11,7 +11,7 @@ import com.microservices.studentservice.model.Student;
 @Repository
 public interface StudentRepository extends CrudRepository<Student, Integer>{
 
-    Optional<Student> findById(int registration);
+    Optional<Student> findById(int id);
 
     Iterable<Student> findAll();
     
