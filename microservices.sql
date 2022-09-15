@@ -39,14 +39,15 @@ select * from subjects.subject;
 create table users.user(
 	id 			int 		 	PRIMARY KEY AUTO_INCREMENT,
 	name 		varchar(255) 	NOT NULL,
+	email 		varchar(255) 	NOT NULL,
 	senha 		varchar(255) 	NOT NULL
 );
 
 create index idx_user_name on users.user(name);
 
-insert into users.user(name, senha) values ('Dani', '123123');
-insert into users.user(name, senha) values ('Arthur', '123');
-insert into users.user(name, senha) values ('Manu', '123123');
-insert into users.user(name, senha) values ('Michael', 'pass');
+insert into users.user(name, email, senha) values ('Dani', 'dani@pucrs.br', '123123');
+insert into users.user(name, email, senha) values ('Arthur', 'arthur@pucrs.br', '123');
+insert into users.user(name, email, senha) values ('Manu', 'manu@pucrs.br', '123123');
+insert into users.user(name, email, senha) values ('Michael', 'michael@pucrs.br', 'pass');
 
 select * from users.user;
