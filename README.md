@@ -14,6 +14,13 @@ Microservices using springboot - Software Engineering 2
 ## Shutdown docker:
 	- 'docker-compose down'
 
+## To connect on database
+```
+docker ps -a
+docker exec -it <it>
+show databases;
+use <database_name>;
+```
 
 #### docker compose info
 	- https://medium.com/codex/how-to-persist-and-backup-data-of-a-postgresql-docker-container-9fe269ff4334
