@@ -4,8 +4,6 @@ import java.util.Optional;
 
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
-
-import com.microservices.studentservice.controller.Subject;
 import com.microservices.studentservice.model.Student;
 
 @Repository
