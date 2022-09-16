@@ -1,5 +1,6 @@
 package com.microservices.studentservice.repository;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
 import org.springframework.data.repository.CrudRepository;
@@ -11,6 +12,6 @@ public interface StudentRepository extends CrudRepository<Student, Integer>{
 
     Optional<Student> findById(int id);
 
-    Iterable<Student> findAll();
+    ArrayList<Student> findAll();
     
 }

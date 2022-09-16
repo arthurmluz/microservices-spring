@@ -1,8 +1,11 @@
 package com.microservices.studentservice.controller;
 
+import java.util.ArrayList;
 import java.util.Optional;
 
+import com.microservices.studentservice.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestBody;
@@ -19,27 +22,22 @@ import com.microservices.studentservice.repository.StudentRepository;
 public class StudentController {
 
     @Autowired
-    private StudentRepository studentRepository;
-
-    @GetMapping("/test")
-    public Student getAllStudents(){
-        return new Student("Dani","1111","Rua X",0);
-    }
+    private StudentService studentService;
 
     @PostMapping(path="/create")
-    public @ResponseBody String addNewSubject(@RequestBody Student student){
-        ((Object) studentRepository).save(student);
-        return "Saved!";
+    public @ResponseBody ResponseEntity<Student> create(@RequestBody Student student){
+        studentService.createStudent(student);
+        return ResponseEntity.ok().body(student);
     }
 
     @GetMapping(path="/all")
-    public @ResponseBody Iterable<Student> getAllUsers() {
-        // This returns a JSON or XML with the users
-        return studentRepository.findAll();
+    public @ResponseBody ResponseEntity<ArrayList<Student>> getAll() {
+        ArrayList<Student> students = studentService.getAllStudents();
+        return ResponseEntity.ok().body(students);
     }
 
     @GetMapping
     public @ResponseBody Optional<Student> getById(@RequestParam("id") int id){
-        return studentRepository.findById(id);
+       return studentService.getStudent(id);
     }
 }
