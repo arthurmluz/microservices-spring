@@ -4,7 +4,7 @@ public class Student {
     private String username;
     private String docNumber;
     private String address;
-    private int id; // numero de matricula
+    private int id;
 
     public String getUsername() {
         return username;

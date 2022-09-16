@@ -6,13 +6,7 @@ import java.util.Optional;
 import com.microservices.studentservice.service.StudentService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
-import org.springframework.web.bind.annotation.GetMapping;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestParam;
-import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
 
 import com.microservices.studentservice.model.Student;
 import com.microservices.studentservice.repository.StudentRepository;
@@ -36,8 +30,13 @@ public class StudentController {
         return ResponseEntity.ok().body(students);
     }
 
-    @GetMapping
-    public @ResponseBody Optional<Student> getById(@RequestParam("id") int id){
-       return studentService.getStudent(id);
+    @GetMapping(path="/{id}")
+    public @ResponseBody ResponseEntity<Student> getById(@PathVariable int id){
+       return ResponseEntity.ok().body(studentService.getStudent(id));
+    }
+
+    @DeleteMapping(path="/{id}")
+    public void delete(@PathVariable int id){
+        studentService.deleteStudent(id);
     }
 }
