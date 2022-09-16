@@ -1,6 +1,10 @@
 # microservices-spring
 Microservices using springboot - Software Engineering 2 
 
+### Run docker first time:
+	docker-compose up -d
+	docker exec -i microservices-spring_db_1 mysql -u root -p123 -f < ./microservices.sql
+
 ## Running docker database:
 	- 'docker-compose up'
 		- will occupy the host terminal with a log
@@ -10,6 +14,7 @@ Microservices using springboot - Software Engineering 2
 		- password = 123
 
 ### Data will be saved on ./data folder, do not delete it
+
 
 ## Shutdown docker:
 	- 'docker-compose down'
