@@ -28,8 +28,6 @@ use <database_name>;
 ## Shutdown docker:
 	- 'docker-compose down'
 
-
-
 #### docker compose info
 	- https://medium.com/codex/how-to-persist-and-backup-data-of-a-postgresql-docker-container-9fe269ff4334
 	- https://www.baeldung.com/ops/docker-compose-expose-vs-ports
@@ -37,8 +35,7 @@ use <database_name>;
 # Program information
 
 **Backend Features:**
-1. Register the student: name, document number, address. To
- registering the student (avoiding duplication) a registration number is created for the student.
+1. Register the student: name, document number, address. To  registering the student (avoiding duplication) a registration number is created for the student.
 
 2. Query a student by registration number;
 
@@ -46,10 +43,7 @@ use <database_name>;
 
 4. Consult the list of all students;
 
-5. register courses, with the data: course code, name of
- discipline, discipline schedule (by codes: A, B, C, D ...., G), class
- of the discipline (numerical code). Remember that the same
- discipline (same code and name) can occur more than once (different classes);
+5. register courses, with the data: course code, discipline's name, discipline schedule (by codes: A, B, C, D ...., G), discipline's class (numerical code). Remember that the same discipline (same code and name) can occur more than once (different classes);
 
 6. Enroll student in the discipline: inform the student's registration number, code and class of the discipline.
 
