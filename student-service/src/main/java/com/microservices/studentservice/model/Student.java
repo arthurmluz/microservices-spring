@@ -1,16 +1,27 @@
 package com.microservices.studentservice.model;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Table;
+
+@Entity
+@Table(name= "student")
 public class Student {
+    @Id
+    @GeneratedValue(strategy=GenerationType.SEQUENCE)
+    private int id;
+
     private String username;
     private String docNumber;
     private String address;
-    private int id;
 
     public String getUsername() {
         return username;
     }
 
-    public Student(String username, String docNumber, String address, int id) {
+    public Student(int id, String username, String docNumber, String address) {
         this.username = username;
         this.docNumber = docNumber;
         this.address = address;

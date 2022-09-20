@@ -21,8 +21,8 @@ create table IF NOT EXISTS subjects.subject(
 	id 			int 	PRIMARY KEY AUTO_INCREMENT,
 	codigo  	varchar(6)	NOT NULL,
 	name 		varchar(255) 	NOT NULL,
-	class_time	varchar(2)	NOT NULL,
-	turma   	int		NOT NULL
+	class_time varchar(2) NOT NULL,
+	turma   	int(5)
 );
 
 create index idx_subject_codigo on subjects.subject(codigo);
