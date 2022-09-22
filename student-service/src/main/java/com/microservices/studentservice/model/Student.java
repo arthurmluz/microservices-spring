@@ -21,6 +21,9 @@ public class Student {
         return username;
     }
 
+    public Student(){
+
+    }
     public Student(int id, String username, String docNumber, String address) {
         this.username = username;
         this.docNumber = docNumber;
