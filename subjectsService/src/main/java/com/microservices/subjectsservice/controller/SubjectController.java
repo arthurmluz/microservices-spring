@@ -9,7 +9,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 @Controller
-@RequestMapping(path="/subject")
+@RequestMapping(path="/subjects")
 public class SubjectController {
 
     @Autowired

@@ -1,5 +1,6 @@
 package com.microservices.studentservice.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -14,21 +15,13 @@ public class Student {
     private int id;
 
     private String username;
+    @Column(unique=true)
     private String docNumber;
     private String address;
 
+
     public String getUsername() {
-        return username;
-    }
-
-    public Student(){
-
-    }
-    public Student(int id, String username, String docNumber, String address) {
-        this.username = username;
-        this.docNumber = docNumber;
-        this.address = address;
-        this.id = id;
+        return this.username;
     }
 
     public void setUsername(String username) {
@@ -36,7 +29,7 @@ public class Student {
     }
 
     public String getDocNumber() {
-        return docNumber;
+        return this.docNumber;
     }
 
     public void setDocNumber(String docNumber) {
@@ -44,7 +37,7 @@ public class Student {
     }
 
     public String getAddress() {
-        return address;
+        return this.address;
     }
 
     public void setAddress(String address) {

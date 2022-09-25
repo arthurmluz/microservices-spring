@@ -8,6 +8,7 @@ import org.springframework.dao.DataIntegrityViolationException;
 import org.springframework.stereotype.Service;
 
 import java.util.ArrayList;
+import java.util.Optional;
 
 
 @Service
@@ -29,9 +30,18 @@ public class StudentService {
        return studentRepository.findById(id).orElseThrow(() -> new NotFoundException());
     }
 
-    public ArrayList<Student> getAllStudents(){
+    public Iterable<Student> getAllStudents(){
         return studentRepository.findAll();
     }
+
+    public ArrayList<Student> getStudentsByName(String username){
+        return studentRepository.findByUsernameContains(username);
+    }
+
+    public Optional<Student> getStudentsByDocNumber(String username){
+        return studentRepository.findByDocNumber(username);
+    }
+
 
     public Student updateStudent(Student student){
         return studentRepository.save(student);

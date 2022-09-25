@@ -1,6 +1,8 @@
 package com.microservices.usersservice.repository;
 
 
+import java.util.Optional;
+
 import org.springframework.data.repository.CrudRepository;
 
 import com.microservices.usersservice.model.User;
@@ -12,4 +14,5 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface UserRepository extends CrudRepository<User, Integer> {
 
+    Optional<User> findByName(String name);
 }

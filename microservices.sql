@@ -1,16 +1,17 @@
 create table IF NOT EXISTS students.student(
 	id 		int 		PRIMARY KEY AUTO_INCREMENT,
-	name 		varchar(255) 	NOT NULL,
-	docNumber 	varchar(255) 	NOT NULL,
+	username 		varchar(255) 	NOT NULL,
+	doc_number	varchar(255) 	NOT NULL UNIQUE,
 	address         varchar(255) 	NOT NULL
 );
 
+
 create index idx_student_name on students.student(name);
 
-insert into students.student(id, name, docNumber, address) values (1, 'Arthur', '123456', 'Predio 32');
-insert into students.student(id, name, docNumber, address) values (2, 'Arthur Hakuna', '123456', 'Predio 50');
-insert into students.student(id, name, docNumber, address) values (3, 'Dani', '7891011', 'Predio 15');
-insert into students.student(id, name, docNumber, address) values (4, 'Manu', '121314', 'Predio 26');
+insert into students.student(id, username, doc_number, address) values (1, 'Arthur', '123456', 'Predio 32');
+insert into students.student(id, username, doc_number, address) values (2, 'Arthur Hakuna', '123456', 'Predio 50');
+insert into students.student(id, username, doc_number, address) values (3, 'Dani', '7891011', 'Predio 15');
+insert into students.student(id, username, doc_number, address) values (4, 'Manu', '121314', 'Predio 26');
 
 select * from students.student;
 
@@ -53,3 +54,26 @@ insert into users.user(id, name, email, senha) values (3, 'Manu', 'manu@pucrs.br
 insert into users.user(id, name, email, senha) values (4, 'Michael', 'michael@pucrs.br', 'pass');
 
 select * from users.user;
+
+create database registrations;
+
+create table IF NOT EXISTS registrations.registration(
+	id 				int 		PRIMARY KEY AUTO_INCREMENT,
+	id_aluno			int			NOT NULL,
+	id_disciplina	int			NOT NULL
+);
+
+insert into registrations.registration(id, id_aluno, id_disciplina) values (1, 1, 1);
+insert into registrations.registration(id, id_aluno, id_disciplina) values (2, 1, 2);
+insert into registrations.registration(id, id_aluno, id_disciplina) values (3, 1, 3);
+insert into registrations.registration(id, id_aluno, id_disciplina) values (4, 1, 4);
+insert into registrations.registration(id, id_aluno, id_disciplina) values (5, 2, 1);
+insert into registrations.registration(id, id_aluno, id_disciplina) values (6, 2, 2);
+insert into registrations.registration(id, id_aluno, id_disciplina) values (7, 3, 1);
+insert into registrations.registration(id, id_aluno, id_disciplina) values (8, 3, 2);
+insert into registrations.registration(id, id_aluno, id_disciplina) values (9, 4, 1);
+insert into registrations.registration(id, id_aluno, id_disciplina) values (10, 4, 2);
+
+select * from registrations.registration;
+
+alter table registrations.registration rename column idDisciplina to id_disciplina;

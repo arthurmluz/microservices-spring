@@ -25,10 +25,23 @@ public class StudentController {
     }
 
     @GetMapping(path="/all")
-    public @ResponseBody ResponseEntity<ArrayList<Student>> getAll() {
-        ArrayList<Student> students = studentService.getAllStudents();
+    public @ResponseBody Iterable<Student> getAll() {
+        Iterable<Student> students = studentService.getAllStudents();
+        return students;
+    }
+
+    @GetMapping(path="/name")
+    public @ResponseBody ResponseEntity<ArrayList<Student>> getByName(@RequestParam("name") String name){
+        ArrayList<Student> students = studentService.getStudentsByName(name);
         return ResponseEntity.ok().body(students);
     }
+
+    @GetMapping(path="/docNumber")
+    public @ResponseBody ResponseEntity<Optional<Student>> getByDocNumber(@RequestParam("docNumber") String name){
+        Optional<Student> students = studentService.getStudentsByDocNumber(name);
+        return ResponseEntity.ok().body(students);
+    }
+
 
     @GetMapping(path="/{id}")
     public @ResponseBody ResponseEntity<Student> getById(@PathVariable int id){

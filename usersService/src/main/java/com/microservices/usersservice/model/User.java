@@ -13,10 +13,19 @@ public class User {
     private String name;
     private String senha;
     private String email;
+    private boolean logado;
     
     public int getId() {
         return id;
     }
+    public void setLogado(boolean logado){
+        this.logado = logado;
+    }
+
+    public boolean getLogado(){
+        return this.logado;
+    }
+
     public String getName() {
         return name;
     }
