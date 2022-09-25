@@ -82,7 +82,7 @@ We sapareted on four microservices, one for students (register, consults), other
 
 8. Consult students enrolled in a discipline/class
 
- <img width="200px" src="./img/ByDisciplinaIdRegistrations.png">
+ <img width="200px" src="./img/ByDisicplinaIdRegistrations.png">
 
 9. Register system user, with your email, name and password;
 
