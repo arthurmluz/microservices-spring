@@ -3,7 +3,7 @@ Microservices using springboot - Software Engineering 2
 
 **Objective:** Implement a solution using a microservices-based architecture. This work will aim to implement a solution using microservices
 
-
+Utilizamos diferentes microserviços cada um com diferentes bancos de dados para manter o acoplamento e isolamento de cada um dos microserviços
 
 # To excute
 
@@ -62,35 +62,35 @@ We sapareted on four microservices, one for students (register, consults), other
 
 4. Consult the list of all students;
 
- <img width="200px" src="https://github.com/arthurmluz/microservices-spring/blob/main/img/getallStudents.png">
+ <img width="200px" src="./img/getallStudents.png">
 
 5. register courses, with the data: course code, discipline's name, discipline schedule (by codes: A, B, C, D ...., G), discipline's class (numerical code). Remember that the same discipline (same code and name) can occur more than once (different classes);
 
-<img width="200px" src="https://github.com/arthurmluz/microservices-spring/blob/main/img/getallStudents.png">
+<img width="200px" src="./img/CreateSubjects.png">
 
 6. Enroll student in the discipline: inform the student's registration number, code and class of the discipline.
 
- <img width="200px" src="https://github.com/arthurmluz/microservices-spring/blob/main/img/CreateRegistrations.png">
+ <img width="200px" src="./img/CreateRegistrations.png">
 
 6.1. Get all registrations
 
- <img width="200px" src="https://github.com/arthurmluz/microservices-spring/blob/main/img/getAllRegistrations.png">
+ <img width="200px" src="./img/getAllRegistrations.png">
 
 7. Consult the subjects/classes in which a student is enrolled;
 
- <img width="200px" src="https://github.com/arthurmluz/microservices-spring/blob/main/img/ByAlunoIdRegistrations.png">
+ <img width="200px" src="./img/ByAlunoIdRegistrations.png">
 
 8. Consult students enrolled in a discipline/class
 
- <img width="200px" src="https://github.com/arthurmluz/microservices-spring/blob/main/img/ByDisciplinaIdRegistrations.png">
+ <img width="200px" src="./img/ByDisciplinaIdRegistrations.png">
 
 9. Register system user, with your email, name and password;
 
- <img width="200px" src="https://github.com/arthurmluz/microservices-spring/blob/main/img/CreateUser.png">
+ <img width="200px" src="./img/CreateUser.png">
 
 10. Log in and log out. Note: implements a simple functionality, it is not necessary to use an authentication/authorization framework.
 
- <img width="100px" src="https://github.com/arthurmluz/microservices-spring/blob/main/img/LoginSucess.png">
+ <img width="100px" src="./img/LoginSucess.png">
 
-  <img width="100px" src="https://github.com/arthurmluz/microservices-spring/blob/main/img/LogOut.png">
+ <img width="100px" src="./img/LogOut.png">
 
