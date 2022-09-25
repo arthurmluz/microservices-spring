@@ -1,9 +1,11 @@
 # microservices-spring
 Microservices using springboot - Software Engineering 2 
 
+Names: Arthur Luz, Daniela Rigoli and Manoella de Azevedo
+
 **Objective:** Implement a solution using a microservices-based architecture. This work will aim to implement a solution using microservices
 
-Utilizamos diferentes microserviços cada um com diferentes bancos de dados para manter o acoplamento e isolamento de cada um dos microserviços
+We use different microservices each with different databases to maintain coupling and isolation of each of the microservices.
 
 # To excute
 
