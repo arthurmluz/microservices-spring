@@ -45,52 +45,52 @@ We sapareted on four microservices, one for students (register, consults), other
 - Registration port 8100
 - Student port 		8080
 
-<img width="200px" src="./img/microservices.png">
+<img width="400px" src="./img/microservices.png">
 
 1. Register the student: name, document number, address. To registering the student (avoiding duplication) a registration number is created for the student.
 
-<img width="200px" src="./img/CreateStudent.png">
+<img width="400px" src="./img/CreateStudent.png">
 
 2. Consult a student by registration number;
 
-<img width="200px" src="./img/getStudentByMatricula.png">
+<img width="400px" src="./img/getStudentByMatricula.png">
 
 3. Consult a student for a piece of their name. If more than one "match", return a list;
 
-<img width="200px" src="./img/getStudentByName.png">
+<img width="400px" src="./img/getStudentByName.png">
 
 
 4. Consult the list of all students;
 
- <img width="200px" src="./img/getallStudents.png">
+ <img width="400px" src="./img/getallStudents.png">
 
 5. register courses, with the data: course code, discipline's name, discipline schedule (by codes: A, B, C, D ...., G), discipline's class (numerical code). Remember that the same discipline (same code and name) can occur more than once (different classes);
 
-<img width="200px" src="./img/CreateSubjects.png">
+<img width="400px" src="./img/CreateSubjects.png">
 
 6. Enroll student in the discipline: inform the student's registration number, code and class of the discipline.
 
- <img width="200px" src="./img/CreateRegistrations.png">
+ <img width="400px" src="./img/CreateRegistrations.png">
 
 6.1. Get all registrations
 
- <img width="200px" src="./img/getAllRegistrations.png">
+ <img width="400px" src="./img/getAllRegistrations.png">
 
 7. Consult the subjects/classes in which a student is enrolled;
 
- <img width="200px" src="./img/ByAlunoIdRegistrations.png">
+ <img width="400px" src="./img/ByAlunoIdRegistrations.png">
 
 8. Consult students enrolled in a discipline/class
 
- <img width="200px" src="./img/ByDisicplinaIdRegistrations.png">
+ <img width="400px" src="./img/ByDisicplinaIdRegistrations.png">
 
 9. Register system user, with your email, name and password;
 
- <img width="200px" src="./img/CreateUser.png">
+ <img width="400px" src="./img/CreateUser.png">
 
 10. Log in and log out. Note: implements a simple functionality, it is not necessary to use an authentication/authorization framework.
 
- <img width="100px" src="./img/LoginSucess.png">
+ <img width="400px" src="./img/LoginSucess.png">
 
- <img width="100px" src="./img/LogOut.png">
+ <img width="400px" src="./img/LogOut.png">
 
